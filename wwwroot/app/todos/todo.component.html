@@ -1,0 +1,15 @@
+<div *ngIf="todo" class="panel panel-default">
+    <div class="panel-heading">Todo</div>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="todo.name">
+        </div>
+        <div class="form-group">
+            <label for="isComplete">Completed:</label>
+            <input type="checkbox" name="isComplete" [(ngModel)]="todo.isCompleted">
+        </div>
+
+        <button class="btn btn-default" (click)="saveTodo()">Save</button>
+        <button class="btn btn-default" (click)="cancel()">Cancel</button>
+</div>
